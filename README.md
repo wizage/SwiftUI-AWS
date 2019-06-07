@@ -8,7 +8,7 @@ This will be my test repo as I start to add a lot of new stuff and learn more ab
         - Get a list back to populate a `List` view
         - Add objects
     - Issues:
-        - Codegen will need to be modified to include SwiftUI and also to make the Item objects `Identifiable`. This is a requirment for `ForEach` and `List` in SwiftUI.
+        - ~Codegen will need to be modified to include SwiftUI and also to make the Item objects `Identifiable`. This is a requirment for `ForEach` and `List` in SwiftUI.~ Fixed using `identified(by:)`
         
 - [ ] Adding auth page with Apple Sign in w/ Cognito
     - Features:
