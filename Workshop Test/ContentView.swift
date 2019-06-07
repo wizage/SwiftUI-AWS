@@ -14,7 +14,7 @@ struct ContentView : View {
         NavigationView {
             List {
                 Section{
-                    ForEach(talkStore.listTalks){ talk in
+                    ForEach(talkStore.listTalks.identified(by:\.id)){ talk in
                         TalkCell(talk: talk)
                     }
                     .onDelete(perform:{ items in

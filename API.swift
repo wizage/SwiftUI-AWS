@@ -1,7 +1,6 @@
 //  This file was automatically generated and should not be edited.
 
 import AWSAppSync
-import SwiftUI
 
 public struct CreateTalkInput: GraphQLMapConvertible {
   public var graphQLMap: GraphQLMap
@@ -1035,7 +1034,7 @@ public final class ListTalksQuery: GraphQLQuery {
         }
       }
 
-      public struct Item: GraphQLSelectionSet, Identifiable {
+      public struct Item: GraphQLSelectionSet {
         public static let possibleTypes = ["Talk"]
 
         public static let selections: [GraphQLSelection] = [
