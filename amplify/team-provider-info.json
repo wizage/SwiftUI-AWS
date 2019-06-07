@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "wtest-20190605220627-authRole",
+            "UnauthRoleArn": "arn:aws:iam::533122240946:role/wtest-20190605220627-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::533122240946:role/wtest-20190605220627-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "wtest-20190605220627-deployment",
+            "UnauthRoleName": "wtest-20190605220627-unauthRole",
+            "StackName": "wtest-20190605220627",
+            "StackId": "arn:aws:cloudformation:us-west-2:533122240946:stack/wtest-20190605220627/d6b5ebb0-8818-11e9-99bd-028e369bfbbe"
+        }
+    }
+}

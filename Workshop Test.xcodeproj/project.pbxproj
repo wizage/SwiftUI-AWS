@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009A029F76943BB3515909B5 /* Pods_Workshop_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C8A224C4301CF73573EAF5 /* Pods_Workshop_Test.framework */; };
 		1B8EE4EE22A8D63A00E101C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8EE4ED22A8D63A00E101C1 /* AppDelegate.swift */; };
 		1B8EE4F022A8D63A00E101C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8EE4EF22A8D63A00E101C1 /* SceneDelegate.swift */; };
 		1B8EE4F222A8D63A00E101C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8EE4F122A8D63A00E101C1 /* ContentView.swift */; };
 		1B8EE4F422A8D63B00E101C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EE4F322A8D63B00E101C1 /* Assets.xcassets */; };
 		1B8EE4F722A8D63B00E101C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EE4F622A8D63B00E101C1 /* Preview Assets.xcassets */; };
 		1B8EE4FA22A8D63B00E101C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EE4F822A8D63B00E101C1 /* LaunchScreen.storyboard */; };
+		1B8EE50222A8D96700E101C1 /* TalkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8EE50122A8D96700E101C1 /* TalkStore.swift */; };
+		1B8EE50522A8D98A00E101C1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8EE50322A8D98900E101C1 /* API.swift */; };
+		1B8EE50622A8D98A00E101C1 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EE50422A8D98900E101C1 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,13 @@
 		1B8EE4F622A8D63B00E101C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B8EE4F922A8D63B00E101C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B8EE4FB22A8D63B00E101C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B8EE50122A8D96700E101C1 /* TalkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkStore.swift; sourceTree = "<group>"; };
+		1B8EE50322A8D98900E101C1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		1B8EE50422A8D98900E101C1 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		1BFA8FCA22AAE13100E641E6 /* Workshop Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Workshop Test.entitlements"; sourceTree = "<group>"; };
+		871705AB0EBFCE6DD84D56D7 /* Pods-Workshop Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workshop Test.debug.xcconfig"; path = "Target Support Files/Pods-Workshop Test/Pods-Workshop Test.debug.xcconfig"; sourceTree = "<group>"; };
+		C351E6963AEA767AAB742923 /* Pods-Workshop Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workshop Test.release.xcconfig"; path = "Target Support Files/Pods-Workshop Test/Pods-Workshop Test.release.xcconfig"; sourceTree = "<group>"; };
+		F2C8A224C4301CF73573EAF5 /* Pods_Workshop_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workshop_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				009A029F76943BB3515909B5 /* Pods_Workshop_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +54,8 @@
 			children = (
 				1B8EE4EC22A8D63A00E101C1 /* Workshop Test */,
 				1B8EE4EB22A8D63A00E101C1 /* Products */,
+				30CE3B49D530E31715F5E70E /* Pods */,
+				C356CF497514BD6F65715BE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +70,9 @@
 		1B8EE4EC22A8D63A00E101C1 /* Workshop Test */ = {
 			isa = PBXGroup;
 			children = (
+				1BFA8FCA22AAE13100E641E6 /* Workshop Test.entitlements */,
+				1B8EE50322A8D98900E101C1 /* API.swift */,
+				1B8EE50422A8D98900E101C1 /* awsconfiguration.json */,
 				1B8EE4ED22A8D63A00E101C1 /* AppDelegate.swift */,
 				1B8EE4EF22A8D63A00E101C1 /* SceneDelegate.swift */,
 				1B8EE4F122A8D63A00E101C1 /* ContentView.swift */,
@@ -63,6 +80,7 @@
 				1B8EE4F822A8D63B00E101C1 /* LaunchScreen.storyboard */,
 				1B8EE4FB22A8D63B00E101C1 /* Info.plist */,
 				1B8EE4F522A8D63B00E101C1 /* Preview Content */,
+				1B8EE50122A8D96700E101C1 /* TalkStore.swift */,
 			);
 			path = "Workshop Test";
 			sourceTree = "<group>";
@@ -75,6 +93,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		30CE3B49D530E31715F5E70E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				871705AB0EBFCE6DD84D56D7 /* Pods-Workshop Test.debug.xcconfig */,
+				C351E6963AEA767AAB742923 /* Pods-Workshop Test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C356CF497514BD6F65715BE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2C8A224C4301CF73573EAF5 /* Pods_Workshop_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B8EE4FE22A8D63B00E101C1 /* Build configuration list for PBXNativeTarget "Workshop Test" */;
 			buildPhases = (
+				A3C9E03BCCDF3460F83994BD /* [CP] Check Pods Manifest.lock */,
 				1B8EE4E622A8D63A00E101C1 /* Sources */,
 				1B8EE4E722A8D63A00E101C1 /* Frameworks */,
 				1B8EE4E822A8D63A00E101C1 /* Resources */,
+				AF09332F4FC665BB0D7DF274 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8EE50622A8D98A00E101C1 /* awsconfiguration.json in Resources */,
 				1B8EE4FA22A8D63B00E101C1 /* LaunchScreen.storyboard in Resources */,
 				1B8EE4F722A8D63B00E101C1 /* Preview Assets.xcassets in Resources */,
 				1B8EE4F422A8D63B00E101C1 /* Assets.xcassets in Resources */,
@@ -140,6 +178,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3C9E03BCCDF3460F83994BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Workshop Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF09332F4FC665BB0D7DF274 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Workshop Test/Pods-Workshop Test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Workshop Test/Pods-Workshop Test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Workshop Test/Pods-Workshop Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1B8EE4E622A8D63A00E101C1 /* Sources */ = {
@@ -149,6 +229,8 @@
 				1B8EE4EE22A8D63A00E101C1 /* AppDelegate.swift in Sources */,
 				1B8EE4F022A8D63A00E101C1 /* SceneDelegate.swift in Sources */,
 				1B8EE4F222A8D63A00E101C1 /* ContentView.swift in Sources */,
+				1B8EE50222A8D96700E101C1 /* TalkStore.swift in Sources */,
+				1B8EE50522A8D98A00E101C1 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +364,10 @@
 		};
 		1B8EE4FF22A8D63B00E101C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 871705AB0EBFCE6DD84D56D7 /* Pods-Workshop Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Workshop Test/Workshop Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Workshop Test\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = AMP8A5BDX8;
@@ -295,6 +379,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wizage.Workshop-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,8 +387,10 @@
 		};
 		1B8EE50022A8D63B00E101C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C351E6963AEA767AAB742923 /* Pods-Workshop Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Workshop Test/Workshop Test.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Workshop Test\"/Preview\\ Content";
 				DEVELOPMENT_TEAM = AMP8A5BDX8;
@@ -315,6 +402,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wizage.Workshop-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_UIKITFORMAC = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

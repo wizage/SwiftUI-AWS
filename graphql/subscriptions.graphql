@@ -1,0 +1,31 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateTalk {
+  onCreateTalk {
+    id
+    clientId
+    name
+    description
+    speakerName
+    speakerBio
+  }
+}
+subscription OnUpdateTalk {
+  onUpdateTalk {
+    id
+    clientId
+    name
+    description
+    speakerName
+    speakerBio
+  }
+}
+subscription OnDeleteTalk {
+  onDeleteTalk {
+    id
+    clientId
+    name
+    description
+    speakerName
+    speakerBio
+  }
+}
