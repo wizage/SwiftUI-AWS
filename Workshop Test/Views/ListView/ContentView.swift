@@ -8,8 +8,17 @@
 
 import SwiftUI
 
+enum StateOfCreation {
+    case save
+    case dismiss
+    case hide
+    case show
+}
+
 struct ContentView : View {
     @EnvironmentObject var talkStore : TalkStore
+    @State var shouldCreate : StateOfCreation = .hide
+    @State var newTalk : CreateTalkInput = CreateTalkInput(name: "", description: "", speakerName: "", speakerBio: "")
     var body: some View {
         NavigationView {
             List {
@@ -24,10 +33,21 @@ struct ContentView : View {
             }
             .navigationBarTitle(Text("Talks"))
             .navigationBarItems(trailing: Button(action: {
-                self.talkStore.add()
-            }, label: {
-                Image(systemName: "plus")
-            }))
+                    self.shouldCreate = .show
+                }, label: {
+                    Image(systemName: "plus").font(.title)
+                    
+                }).disabled(self.shouldCreate == .show))
+                .presentation(self.shouldCreate == .show ? Modal(AddTalk(talk: $newTalk, isShowing:$shouldCreate).environmentObject(talkStore), onDismiss: {
+                    print(self.shouldCreate)
+                    if (self.shouldCreate == .save){
+                        print("Saving")
+                    } else {
+                        print("dismissed")
+                    }
+                    self.shouldCreate = .hide
+                    self.newTalk =  CreateTalkInput(name: "", description: "", speakerName: "", speakerBio: "")
+            }) : nil)
             .listStyle(.grouped)
         }
     }
@@ -49,15 +69,3 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
-
-struct TalkCell : View {
-    let talk : ListTalksQuery.Data.ListTalk.Item
-    var body: some View {
-        return VStack(alignment: .leading) {
-            Text("\(talk.name)")
-                .font(.title)
-            Text("\(talk.speakerName)")
-                .font(.subheadline)
-        }
-    }
-}

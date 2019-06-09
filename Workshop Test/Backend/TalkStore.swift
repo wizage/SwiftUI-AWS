@@ -8,7 +8,6 @@
 
 import Combine
 import SwiftUI
-import AuthenticationServices
 import AWSAppSync
 
 final class TalkStore: BindableObject {
