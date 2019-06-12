@@ -26,23 +26,25 @@ struct AddTalk : View {
                         .frame(height:150)
                     }
                     Section(header:Text("Speaker Name")){
-                        TextField($talk.description)
+                        TextField($talk.speakerName)
                         .lineLimit(1)
                     }
                     Section(header:Text("Speaker Bio")){
-                        TextField($talk.description)
+                        TextField($talk.speakerBio)
                             .frame(height:150)
                     }
                 }
                 .listStyle(.grouped)
             .navigationBarTitle(Text("Add Talk"))
-            .navigationBarItems(leading:
+            .navigationBarItems(trailing:
                 Button(action: {
-                    self.talkStore.add()
-                    self.isShowing = .dismiss
-                }, label: { Text("Dismiss") }), trailing:
-                Button(action: {
-                        self.isShowing = .save
+                        if (self.talk.name == "" || self.talk.speakerName == ""){
+                            
+                        } else {
+                            self.isShowing = .save
+                            self.talkStore.add(create:self.talk)
+                        }
+                    
                     }, label: {
                         Text("Save")
                 }))
@@ -59,7 +61,7 @@ struct AddTalk : View {
 struct AddTalk_Previews : PreviewProvider {
     
     static var previews: some View {
-        return AddTalk(talk: .constant(.init(name: "", description: "", speakerName: "", speakerBio: "")), isShowing: .constant(.show))
+        return AddTalk(talk: .constant(.init(name: "", description: "", speakerName: "", speakerBio: "")), isShowing: .constant(.show)).environmentObject(TalkStore())
     }
 }
 #endif

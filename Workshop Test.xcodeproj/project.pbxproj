@@ -15,11 +15,12 @@
 		1B8EE4F722A8D63B00E101C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EE4F622A8D63B00E101C1 /* Preview Assets.xcassets */; };
 		1B8EE4FA22A8D63B00E101C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EE4F822A8D63B00E101C1 /* LaunchScreen.storyboard */; };
 		1B8EE50222A8D96700E101C1 /* TalkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8EE50122A8D96700E101C1 /* TalkStore.swift */; };
+		1BC84F3322AFFB0000F458A8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC84F3222AFFB0000F458A8 /* DetailView.swift */; };
+		1BC84F3522B0709D00F458A8 /* CreateTalkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC84F3422B0709D00F458A8 /* CreateTalkStore.swift */; };
 		1BFA8FF122AB695400E641E6 /* TalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA8FF022AB695400E641E6 /* TalkCell.swift */; };
 		1BFA8FF322AB69E000E641E6 /* AddTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA8FF222AB69E000E641E6 /* AddTalk.swift */; };
 		1BFA8FFC22AB710100E641E6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA8FFB22AB710100E641E6 /* API.swift */; };
 		1BFA8FFE22AB711600E641E6 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BFA8FFD22AB711600E641E6 /* awsconfiguration.json */; };
-		1BFA900222AB72CC00E641E6 /* CreateTalkStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA900122AB72CC00E641E6 /* CreateTalkStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,12 +33,13 @@
 		1B8EE4F922A8D63B00E101C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B8EE4FB22A8D63B00E101C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B8EE50122A8D96700E101C1 /* TalkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkStore.swift; sourceTree = "<group>"; };
+		1BC84F3222AFFB0000F458A8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1BC84F3422B0709D00F458A8 /* CreateTalkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTalkStore.swift; sourceTree = "<group>"; };
 		1BFA8FCA22AAE13100E641E6 /* Workshop Test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Workshop Test.entitlements"; sourceTree = "<group>"; };
 		1BFA8FF022AB695400E641E6 /* TalkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkCell.swift; sourceTree = "<group>"; };
 		1BFA8FF222AB69E000E641E6 /* AddTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTalk.swift; sourceTree = "<group>"; };
 		1BFA8FFB22AB710100E641E6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1BFA8FFD22AB711600E641E6 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		1BFA900122AB72CC00E641E6 /* CreateTalkStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTalkStore.swift; sourceTree = "<group>"; };
 		871705AB0EBFCE6DD84D56D7 /* Pods-Workshop Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workshop Test.debug.xcconfig"; path = "Target Support Files/Pods-Workshop Test/Pods-Workshop Test.debug.xcconfig"; sourceTree = "<group>"; };
 		C351E6963AEA767AAB742923 /* Pods-Workshop Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workshop Test.release.xcconfig"; path = "Target Support Files/Pods-Workshop Test/Pods-Workshop Test.release.xcconfig"; sourceTree = "<group>"; };
 		F2C8A224C4301CF73573EAF5 /* Pods_Workshop_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Workshop_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,9 +96,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		1BC84F3122AFFAE800F458A8 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				1BC84F3222AFFB0000F458A8 /* DetailView.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		1BFA8FF522AB706500E641E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1BC84F3122AFFAE800F458A8 /* DetailView */,
 				1BFA8FF722AB707800E641E6 /* ListView */,
 				1BFA900022AB713C00E641E6 /* AddView */,
 			);
@@ -136,7 +147,7 @@
 				1BFA8FFB22AB710100E641E6 /* API.swift */,
 				1BFA8FFD22AB711600E641E6 /* awsconfiguration.json */,
 				1B8EE50122A8D96700E101C1 /* TalkStore.swift */,
-				1BFA900122AB72CC00E641E6 /* CreateTalkStore.swift */,
+				1BC84F3422B0709D00F458A8 /* CreateTalkStore.swift */,
 			);
 			path = Backend;
 			sourceTree = "<group>";
@@ -292,11 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B8EE4EE22A8D63A00E101C1 /* AppDelegate.swift in Sources */,
+				1BC84F3322AFFB0000F458A8 /* DetailView.swift in Sources */,
+				1BC84F3522B0709D00F458A8 /* CreateTalkStore.swift in Sources */,
 				1B8EE4F022A8D63A00E101C1 /* SceneDelegate.swift in Sources */,
 				1B8EE4F222A8D63A00E101C1 /* ContentView.swift in Sources */,
 				1BFA8FF122AB695400E641E6 /* TalkCell.swift in Sources */,
 				1B8EE50222A8D96700E101C1 /* TalkStore.swift in Sources */,
-				1BFA900222AB72CC00E641E6 /* CreateTalkStore.swift in Sources */,
 				1BFA8FFC22AB710100E641E6 /* API.swift in Sources */,
 				1BFA8FF322AB69E000E641E6 /* AddTalk.swift in Sources */,
 			);

@@ -16,6 +16,7 @@ final class TalkStore: BindableObject {
      */
     let didChange = PassthroughSubject<[ListTalksQuery.Data.ListTalk.Item], Never>()
     private let appSyncClient: AWSAppSyncClient!
+    private var currentDetail : GetTalkQuery.Data.GetTalk!
     var listTalks: [ListTalksQuery.Data.ListTalk.Item] {
         didSet {
             didChange.send(self.listTalks)
@@ -28,6 +29,7 @@ final class TalkStore: BindableObject {
      */
     init(){
         self.listTalks = []
+        self.currentDetail = nil
         do {
             let appSyncConfig = try AWSAppSyncClientConfiguration(appSyncServiceConfig: AWSAppSyncServiceConfig(),cacheConfiguration: AWSAppSyncCacheConfiguration())
             
@@ -56,6 +58,7 @@ final class TalkStore: BindableObject {
     init(talks: [ListTalksQuery.Data.ListTalk.Item]){
         self.appSyncClient = nil
         self.listTalks = talks
+        self.currentDetail = nil
     }
     func delete(at: IndexSet){
         if(appSyncClient != nil){
@@ -78,11 +81,12 @@ final class TalkStore: BindableObject {
         self.listTalks.remove(at: at)
     }
     
-    func add(){
+    func add(create: CreateTalkInput){
         if (appSyncClient != nil){
-            let conferenceInput = CreateTalkInput(name: "Monetize your iOS app", description: "How to make dough as an iOS developer", speakerName: "Steve Jobs", speakerBio: "I do cool stuff at Apple")
-            appSyncClient?.perform(mutation: CreateTalkMutation(input: conferenceInput))
+            print("Appsync not null")
+            appSyncClient?.perform(mutation: CreateTalkMutation(input: create))
             { (result, error) in
+                print("Calling")
                 if let error = error as? AWSAppSyncClientError {
                     print("Error occurred: \(error.localizedDescription )")
                     return
@@ -98,8 +102,7 @@ final class TalkStore: BindableObject {
             }
             //write it to our backend
         } else {
-            let newItem = CreateTalkMutation.Data.CreateTalk(id: "100", name: "Monetize your iOS app", description: "How to make dough as an iOS developer", speakerName: "Steve Jobs", speakerBio: "I do cool stuff at Apple")
-            listTalks.append(mapAdd(neededConversion: newItem))
+            listTalks.append(mapAdd(neededConversion: CreateTalkMutation.Data.CreateTalk(id: "0", name: create.name, description: create.description, speakerName: create.speakerName, speakerBio: create.speakerBio)))
         }
     }
     

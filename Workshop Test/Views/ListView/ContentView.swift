@@ -18,13 +18,20 @@ enum StateOfCreation {
 struct ContentView : View {
     @EnvironmentObject var talkStore : TalkStore
     @State var shouldCreate : StateOfCreation = .hide
+    @Binding var createTalk : CreateTalkStore
     @State var newTalk : CreateTalkInput = CreateTalkInput(name: "", description: "", speakerName: "", speakerBio: "")
     var body: some View {
         NavigationView {
             List {
                 Section{
                     ForEach(talkStore.listTalks.identified(by:\.id)){ talk in
-                        TalkCell(talk: talk)
+                        NavigationButton(destination: DetailView(talkStore:self.$createTalk, id: talk.id), onTrigger: {
+                            self.createTalk.getDetails(id: talk.id)
+                            return true
+                        }, label: {
+                            TalkCell(talk: talk)
+                        })
+                        
                     }
                     .onDelete(perform:{ items in
                         withAnimation {self.delete(offsets: items)}
@@ -39,12 +46,6 @@ struct ContentView : View {
                     
                 }).disabled(self.shouldCreate == .show))
                 .presentation(self.shouldCreate == .show ? Modal(AddTalk(talk: $newTalk, isShowing:$shouldCreate).environmentObject(talkStore), onDismiss: {
-                    print(self.shouldCreate)
-                    if (self.shouldCreate == .save){
-                        print("Saving")
-                    } else {
-                        print("dismissed")
-                    }
                     self.shouldCreate = .hide
                     self.newTalk =  CreateTalkInput(name: "", description: "", speakerName: "", speakerBio: "")
             }) : nil)
@@ -64,7 +65,7 @@ struct ContentView_Previews : PreviewProvider {
             ListTalksQuery.Data.ListTalk.Item(id: "1", name: "WWDC Recap", description: "", speakerName: "Tim Apple", speakerBio: ""),
             ListTalksQuery.Data.ListTalk.Item(id: "2", name: "Bash Party", description: "", speakerName: "Weezer", speakerBio: "")
         ]
-        return ContentView()
+        return ContentView(createTalk: .constant(CreateTalkStore()))
         .environmentObject(TalkStore(talks: sampleData))
     }
 }
